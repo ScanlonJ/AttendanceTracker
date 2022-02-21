@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "381832267883",
+    "project_id": "attendancetracker-4301e",
+    "storage_bucket": "attendancetracker-4301e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381832267883:android:dc370773f5a2c33a74092e",
+        "android_client_info": {
+          "package_name": "com.Daelgan.attendancetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381832267883-civ7rlj7vsjk8khvsbqjphp1o4ugllqa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZi9IW-NG81f6zqBPwJgkd8vGhZVrz2rg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381832267883-civ7rlj7vsjk8khvsbqjphp1o4ugllqa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

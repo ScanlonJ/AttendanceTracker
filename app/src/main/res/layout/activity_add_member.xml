@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMemberActivity">
+
+    <!-- New Member Name -->
+    <TextView
+        android:id="@+id/addMemberName"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/addMemberNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        app:layout_constraintLeft_toRightOf="@+id/addMemberName"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- New Member DoB -->
+    <TextView
+        android:id="@+id/addMemberDoB"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="DoB:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberNameEditText"/>
+
+    <EditText
+        android:id="@+id/addMemberDoBET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="dd/MM/yyyy"
+        app:layout_constraintLeft_toRightOf="@+id/addMemberDoB"
+        app:layout_constraintTop_toBottomOf="@id/addMemberNameEditText"/>
+
+    <!-- New Member Join Date -->
+    <TextView
+        android:id="@+id/addMemberJoinDate"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Join Date:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMemberDoBET"/>
+
+    <EditText
+        android:id="@+id/addMemberJoinDateET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Join Date"
+        app:layout_constraintLeft_toRightOf="@id/addMemberJoinDate"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberDoBET"/>
+
+    <!-- New Member Belt Level-->
+    <TextView
+        android:id="@+id/addMemberBeltLevel"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Belt Level:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberJoinDateET"/>
+
+    <Spinner
+        android:id="@+id/addMemberBeltLevelSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/addMemberBeltLevel"
+        app:layout_constraintTop_toBottomOf="@id/addMemberJoinDateET"/>
+
+    <!-- New Member Date Of Last Test -->
+    <TextView
+        android:id="@+id/addMemberDateOfLastTest"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Date of Last Test:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMemberBeltLevelSpinner"/>
+
+    <EditText
+        android:id="@+id/addMemberDateOfLastTestET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Date of Last Test"
+        app:layout_constraintLeft_toRightOf="@id/addMemberDateOfLastTest"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberBeltLevelSpinner"/>
+
+    <!-- New Member Classes Since Last Test -->
+    <TextView
+        android:id="@+id/addMemberClassesSinceLastTest"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Classes Since Last Test:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMemberDateOfLastTestET"/>
+
+    <EditText
+        android:id="@+id/addMemberClassesSinceLastTestET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Classes Since Last Test"
+        app:layout_constraintLeft_toRightOf="@id/addMemberClassesSinceLastTest"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberDateOfLastTestET"/>
+
+    <!-- New Member Contact Number -->
+    <TextView
+        android:id="@+id/addMemberContactNumber"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Contact Number:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMemberClassesSinceLastTestET"/>
+
+    <EditText
+        android:id="@+id/addMemberContactNumberET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Contact Number"
+        app:layout_constraintLeft_toRightOf="@id/addMemberContactNumber"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberClassesSinceLastTestET"/>
+
+    <!-- New Member Contact Email -->
+    <TextView
+        android:id="@+id/addMemberContactEmail"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Contact Email:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMemberContactNumberET"/>
+
+    <EditText
+        android:id="@+id/addMemberContactEmailET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Contact Email"
+        app:layout_constraintLeft_toRightOf="@id/addMemberContactEmail"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberContactNumberET"/>
+
+    <!-- New Member Contact Relation -->
+    <TextView
+        android:id="@+id/addMemberContactRelation"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Contact Relation:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMemberContactEmailET"/>
+
+    <EditText
+        android:id="@+id/addMemberContactRelationET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Contact Relation"
+        app:layout_constraintLeft_toRightOf="@id/addMemberContactRelation"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberContactEmailET"/>
+
+    <!-- New Member Contact Name -->
+    <TextView
+        android:id="@+id/addMemberContactName"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Contact Name:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMemberContactRelationET"/>
+
+    <EditText
+        android:id="@+id/addMemberContactNameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Contact Name"
+        app:layout_constraintLeft_toRightOf="@id/addMemberContactName"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberContactRelationET"/>
+
+    <!-- New Member Classes Purchased -->
+    <TextView
+        android:id="@+id/addMemberClassesPurchased"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Classes Purchased:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMemberContactNameET"/>
+
+    <EditText
+        android:id="@+id/addMemberClassesPurchasedET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Classes Purchased"
+        app:layout_constraintLeft_toRightOf="@id/addMemberClassesPurchased"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberContactNameET"/>
+
+    <!-- New Member Classes Attended -->
+    <TextView
+        android:id="@+id/addMemberClassesAttended"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Classes Attended:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMemberClassesPurchasedET"/>
+
+    <EditText
+        android:id="@+id/addMemberClassesAttendedET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Classes Attended"
+        app:layout_constraintLeft_toRightOf="@id/addMemberClassesAttended"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberClassesPurchasedET"/>
+
+    <!-- Cancel and Submit buttons-->
+    <Button
+        android:id="@+id/addMemberCancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintTop_toBottomOf="@id/addMemberClassesAttended"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/addMemberSubmitButton" />
+
+    <Button
+        android:id="@+id/addMemberSubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/addMemberClassesAttended"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/addMemberCancelButton"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

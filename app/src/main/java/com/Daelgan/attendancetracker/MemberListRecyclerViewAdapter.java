@@ -28,7 +28,8 @@ public class MemberListRecyclerViewAdapter extends FirebaseRecyclerAdapter<Membe
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(@NonNull memberViewHolder holder, int position, @NonNull Member model) {
-        holder.Name.setText((model.getName()));
+        String name = model.getName() + " " +  model.getFamilyName();
+        holder.Name.setText(name);
     }
 
 

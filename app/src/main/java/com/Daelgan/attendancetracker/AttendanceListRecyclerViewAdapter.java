@@ -11,6 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class AttendanceListRecyclerViewAdapter extends FirebaseRecyclerAdapter<Member, AttendanceListRecyclerViewAdapter.Attendance2ListMemberViewHolder> {
 
@@ -29,9 +34,37 @@ public class AttendanceListRecyclerViewAdapter extends FirebaseRecyclerAdapter<M
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(@NonNull Attendance2ListMemberViewHolder holder, int position, @NonNull Member model) {
-        holder.Name.setText((model.getName()));
-        holder.ClassesRemaining.setText(model.getClassesRemaining());
+        String name = model.getName() + " " + model.getFamilyName();
+        holder.Name.setText(name);
         holder.checkBox.setChecked(false);
+
+        DatabaseReference memberReference = FirebaseDatabase.getInstance().getReference("Members").child(model.getName() + "-" + model.getFamilyName());
+        memberReference.child("FamilyID").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String FamilyID = snapshot.getValue(String.class);
+
+                DatabaseReference familyReference = FirebaseDatabase.getInstance().getReference("Families").child(FamilyID);
+
+                familyReference.child("ClassesRemaining").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        holder.ClassesRemaining.setText(snapshot.getValue(String.class));
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 
 

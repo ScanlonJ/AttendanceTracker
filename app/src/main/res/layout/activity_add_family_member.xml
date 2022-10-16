@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFamilyMemberActivity"
+    android:id="@+id/AddFamilyMemberActivity">
+
+    <!-- New Member Name -->
+    <TextView
+        android:id="@+id/addFamilyMemberName"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/addFamilyMemberNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        app:layout_constraintLeft_toRightOf="@+id/addFamilyMemberName"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- New Member DoB -->
+    <TextView
+        android:id="@+id/addFamilyMemberDoB"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="DoB:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addFamilyMemberNameEditText" />
+
+    <EditText
+        android:id="@+id/addFamilyMemberDoBET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="dd/MM/yyyy"
+        app:layout_constraintLeft_toRightOf="@+id/addFamilyMemberDoB"
+        app:layout_constraintTop_toBottomOf="@+id/addFamilyMemberNameEditText" />
+
+    <!-- New Member Join Date -->
+    <TextView
+        android:id="@+id/addFamilyMemberJoinDate"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Join Date:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addFamilyMemberDoBET"/>
+
+    <EditText
+        android:id="@+id/addFamilyMemberJoinDateET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Join Date"
+        app:layout_constraintLeft_toRightOf="@id/addFamilyMemberJoinDate"
+        app:layout_constraintTop_toBottomOf="@+id/addFamilyMemberDoBET"/>
+
+    <!-- New Member Belt Level-->
+    <TextView
+        android:id="@+id/addFamilyMemberBeltLevel"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Belt Level:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addFamilyMemberJoinDateET"/>
+
+    <Spinner
+        android:id="@+id/addFamilyMemberBeltLevelSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/addFamilyMemberBeltLevel"
+        app:layout_constraintTop_toBottomOf="@id/addFamilyMemberJoinDateET"/>
+
+    <!-- New Member Date Of Last Test -->
+    <TextView
+        android:id="@+id/addFamilyMemberDateOfLastTest"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Date of Last Test:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addFamilyMemberBeltLevelSpinner"/>
+
+    <EditText
+        android:id="@+id/addFamilyMemberDateOfLastTestET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Date of Last Test"
+        app:layout_constraintLeft_toRightOf="@id/addFamilyMemberDateOfLastTest"
+        app:layout_constraintTop_toBottomOf="@+id/addFamilyMemberBeltLevelSpinner"/>
+
+    <!-- New Member Classes Since Last Test -->
+    <TextView
+        android:id="@+id/addFamilyMemberClassesSinceLastTest"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Classes Since Last Test:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addFamilyMemberDateOfLastTestET"/>
+
+    <EditText
+        android:id="@+id/addFamilyMemberClassesSinceLastTestET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Classes Since Last Test"
+        app:layout_constraintLeft_toRightOf="@id/addFamilyMemberClassesSinceLastTest"
+        app:layout_constraintTop_toBottomOf="@+id/addFamilyMemberDateOfLastTestET"/>
+
+    <!-- New Member Classes Attended -->
+    <TextView
+        android:id="@+id/addFamilyMemberClassesAttended"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Classes Attended:"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addFamilyMemberClassesSinceLastTestET" />
+
+    <EditText
+        android:id="@+id/addFamilyMemberClassesAttendedET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Classes Attended"
+        app:layout_constraintLeft_toRightOf="@id/addFamilyMemberClassesAttended"
+        app:layout_constraintTop_toBottomOf="@+id/addFamilyMemberClassesSinceLastTestET"/>
+
+    <!-- Cancel and Submit buttons-->
+    <Button
+        android:id="@+id/addFamilyMemberCancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/addFamilyMemberSubmitButton" />
+
+    <Button
+        android:id="@+id/addFamilyMemberSubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/addFamilyMemberCancelButton"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

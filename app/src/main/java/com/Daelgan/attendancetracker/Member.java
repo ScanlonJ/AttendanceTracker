@@ -1,8 +1,9 @@
 package com.Daelgan.attendancetracker;
 
-public class Member {
+public class Member{
 
     private String Name;
+    private String FamilyName;
     private String DoB;
     private String Age;
     private String JoinDate;
@@ -10,13 +11,8 @@ public class Member {
     private String BeltRank;
     private String DateOfLastTest;
     private String ClassesSinceLastTest;
-    private String ContactNumber;
-    private String ContactEmail;
-    private String ContactRelation;
-    private String ContactName;
-    private String ClassesPurchased;
     private String ClassesAttended;
-    private String ClassesRemaining;
+    private String id;
 
     public Member(){}
 
@@ -29,6 +25,10 @@ public class Member {
     {
         this.Name = Name;
     }
+
+    public String getFamilyName() { return FamilyName; }
+
+    public void setFamilyName(String FamilyName) { this.Name = Name; }
 
     public String getDoB() {
         return DoB;
@@ -90,46 +90,6 @@ public class Member {
         ClassesSinceLastTest = classesSinceLastTest;
     }
 
-    public String getContactNumber() {
-        return ContactNumber;
-    }
-
-    public void setContactNumber(String contactNumber) {
-        ContactNumber = contactNumber;
-    }
-
-    public String getContactEmail() {
-        return ContactEmail;
-    }
-
-    public void setContactEmail(String contactEmail) {
-        ContactEmail = contactEmail;
-    }
-
-    public String getContactRelation() {
-        return ContactRelation;
-    }
-
-    public void setContactRelation(String contactRelation) {
-        ContactRelation = contactRelation;
-    }
-
-    public String getContactName() {
-        return ContactName;
-    }
-
-    public void setContactName(String contactName) {
-        ContactName = contactName;
-    }
-
-    public String getClassesPurchased() {
-        return ClassesPurchased;
-    }
-
-    public void setClassesPurchased(String classesPurchased) {
-        ClassesPurchased = classesPurchased;
-    }
-
     public String getClassesAttended() {
         return ClassesAttended;
     }
@@ -138,11 +98,11 @@ public class Member {
         ClassesAttended = classesAttended;
     }
 
-    public String getClassesRemaining() {
-        return ClassesRemaining;
+    public String getId() {
+        return id;
     }
 
-    public void setClassesRemaining(String classesRemaining) {
-        ClassesRemaining = classesRemaining;
+    public void setId(String id) {
+        id = id;
     }
 }

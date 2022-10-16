@@ -18,6 +18,9 @@
             android:name=".AddMemberActivity"
             android:exported="false" />
         <activity
+            android:name=".AddFamilyMemberActivity"
+            android:exported="false" />
+        <activity
             android:name=".MembersListActivity"
             android:exported="false" />
         <activity

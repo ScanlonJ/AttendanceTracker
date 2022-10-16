@@ -8,24 +8,67 @@
 
     <Button
         android:id="@+id/MembersListButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="StartMembersListActivity"
         android:text="Members"
-        app:layout_constraintBottom_toTopOf="@id/MembersList2Button"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="10dp"
+        app:layout_constraintWidth_percent="0.33"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <Button
         android:id="@+id/MembersList2Button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="StartAttendanceListActivity"
         android:text="Attendance"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="10dp"
+        app:layout_constraintWidth_percent="0.33"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/ClubInfoButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Club Info"
+        android:textSize="10dp"
+        app:layout_constraintWidth_percent="0.33"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MembersListButton" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/ClubInfoTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ignore this screen for now"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ClubInfoTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For future use"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ClubInfoTextView1" />
+
+    <TextView
+        android:id="@+id/ClubInfoTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Club statistics"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ClubInfoTextView2" />
+
+    <TextView
+        android:id="@+id/ClubInfoTextView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Like active members"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ClubInfoTextView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

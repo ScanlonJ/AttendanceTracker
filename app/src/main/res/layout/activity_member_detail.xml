@@ -24,10 +24,18 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
+        android:id="@+id/detailMemberFamilyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintLeft_toRightOf="@+id/detailMemberName2"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
         android:id="@+id/detailMemberDoB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Join Date:"
+        android:text="Date of Birth:"
         android:layout_marginStart="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailMemberName"/>
@@ -247,7 +255,7 @@
     <Button
         android:id="@+id/detailMemberAdd1ClassButton"
         android:layout_width="170dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Add 1 Class"
         android:layout_marginStart="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -258,7 +266,7 @@
     <Button
         android:id="@+id/detailMemberAdd12ClassButton"
         android:layout_width="170dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Add 12 Classes"
         android:layout_marginStart="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -268,7 +276,7 @@
     <Button
         android:id="@+id/detailMemberAdd50ClassButton"
         android:layout_width="170dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Add 50 Classes"
         android:layout_marginStart="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -278,12 +286,22 @@
     <Button
         android:id="@+id/detailMemberPromotionButton"
         android:layout_width="170dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Promote"
         android:layout_marginEnd="10dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailMemberAdd1ClassButton"
         app:layout_constraintBottom_toTopOf="@+id/detailMemberAdd50ClassButton" />
+
+    <Button
+        android:id="@+id/detailMemberAddFamilyMemberButton"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:text="Add\nFamily Member"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailMemberPromotionButton"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

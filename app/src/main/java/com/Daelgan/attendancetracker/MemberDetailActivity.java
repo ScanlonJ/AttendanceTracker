@@ -175,6 +175,26 @@ public class MemberDetailActivity extends AppCompatActivity {
                             }
                         });
 
+                        familyReference.child("ClassesRemaining").addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                String ClassesRemaining = snapshot.getValue(String.class);
+                                int ClassesRemainingInt;
+                                if (ClassesRemaining.equals(""))
+                                    ClassesRemainingInt = 0;
+                                else
+                                    ClassesRemainingInt = Integer.parseInt(ClassesRemaining);
+                                ++ClassesRemainingInt;
+                                familyReference.child("ClassesRemaining").setValue(String.valueOf(ClassesRemainingInt));
+                                familyReference.child("ClassesRemaining").removeEventListener(this);
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
+
                         Context context = getApplicationContext();
                         Toast submitToast = Toast.makeText(context, "Submitting...", Toast.LENGTH_SHORT);
                         submitToast.show();
@@ -204,6 +224,26 @@ public class MemberDetailActivity extends AppCompatActivity {
                             }
                         });
 
+                        familyReference.child("ClassesRemaining").addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                String ClassesRemaining = snapshot.getValue(String.class);
+                                int ClassesRemainingInt;
+                                if (ClassesRemaining.equals(""))
+                                    ClassesRemainingInt = 0;
+                                else
+                                    ClassesRemainingInt = Integer.parseInt(ClassesRemaining);
+                                ClassesRemainingInt = ClassesRemainingInt + 12;
+                                familyReference.child("ClassesRemaining").setValue(String.valueOf(ClassesRemainingInt));
+                                familyReference.child("ClassesRemaining").removeEventListener(this);
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
+
                         Context context = getApplicationContext();
                         Toast submitToast = Toast.makeText(context, "Submitting...", Toast.LENGTH_SHORT);
                         submitToast.show();
@@ -225,6 +265,26 @@ public class MemberDetailActivity extends AppCompatActivity {
                                 classesPurchasedInt = classesPurchasedInt + 50;
                                 familyReference.child("ClassesPurchased").setValue(String.valueOf(classesPurchasedInt));
                                 familyReference.child("ClassesPurchased").removeEventListener(this);
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
+
+                        familyReference.child("ClassesRemaining").addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                String ClassesRemaining = snapshot.getValue(String.class);
+                                int ClassesRemainingInt;
+                                if (ClassesRemaining.equals(""))
+                                    ClassesRemainingInt = 0;
+                                else
+                                    ClassesRemainingInt = Integer.parseInt(ClassesRemaining);
+                                ClassesRemainingInt = ClassesRemainingInt + 50;
+                                familyReference.child("ClassesRemaining").setValue(String.valueOf(ClassesRemainingInt));
+                                familyReference.child("ClassesRemaining").removeEventListener(this);
                             }
 
                             @Override
